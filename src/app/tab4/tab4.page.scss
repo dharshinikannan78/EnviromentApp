@@ -1,0 +1,30 @@
+.ion-cards {
+    padding: 15px;
+    border-radius: 30px;
+    display: flex;
+    width: 4.5rem;
+    align-items: center;
+    justify-content: center;
+}
+ion-checkbox {
+    --size: 20px;
+    --background-checked: #6815ec;
+}
+
+ion-checkbox::part(container) {
+    border-radius: 6px;
+    border: 2px solid #6815ec;
+}
+.ion_Card {
+    border-radius: 3rem;
+    padding: 2rem;
+}
+.ionCard {
+    border-radius: 2rem;
+    padding: 0.5rem;
+    background-color: rgb(5, 155, 85);
+    color: #fff;
+}
+ionCard:hover {
+    --background-color: red;
+}

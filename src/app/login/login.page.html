@@ -1,0 +1,67 @@
+<ion-content class="main ion-padding">
+  <div class="content">
+    <ion-text>
+    </ion-text>
+    <div class="bottom">
+      <ion-button id="open-that" (click)="isopen = !isopen" expand="block" *ngIf="!isopen">
+        Sign in
+      </ion-button>
+    </div>
+    <ion-modal [isOpen]="isopen" (ionModalDidDismiss)="isopen = !isopen" show-backdrop="false" trigger="open-modal1"
+      [initialBreakpoint]="0.75">
+      <ng-template>
+        <ion-content class="mainContent modal-content ion-padding">
+          <div class="wrap" style="margin-top: 2rem;">
+            <ion-item lines="none">
+              <ion-input placeholder="Enter Input"></ion-input>
+            </ion-item>
+            <ion-item lines="none" style="margin-top: .3rem;">
+              <ion-input type="password" placeholder="Password"></ion-input>
+            </ion-item>
+            <ion-grid>
+              <ion-row>
+                <ion-col>
+                  <div>
+                    <ion-checkbox slot="start"></ion-checkbox>
+                    <ion-label style="font-size: 13px;">Remember Me!</ion-label>
+                  </div>
+                </ion-col>
+
+                <ion-col>
+                  <ion-label style="font-size: 13px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Forget Password ?</ion-label>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+
+            <ion-button (click)="logIn()" expand="block"><b>Sign In</b>
+            </ion-button>
+            <p
+              style="margin-top: 2rem; font-size: 20px; text-align: center !important;color: #002328;font-weight: 800; ">
+              <b>Or</b>
+            </p>
+
+            <div>
+              <ion-row>
+                <ion-col>
+                  <ion-card>
+                    <ion-icon name="logo-google"></ion-icon>
+                  </ion-card>
+                </ion-col>
+
+                <ion-col>
+                  <ion-card>
+                    <ion-icon name="logo-facebook"></ion-icon>
+                  </ion-card>
+                </ion-col>
+              </ion-row>
+            </div>
+          </div>
+          <div style="justify-content: center; display: flex; text-align: center;">
+            <p (click)="getClick()"><small><b>Sign Up</b></small></p>
+          </div>
+        </ion-content>
+      </ng-template>
+    </ion-modal>
+  </div>
+
+</ion-content>

@@ -1,0 +1,166 @@
+<ion-toolbar>
+    <ion-buttons slot="start">
+        <ion-button (click)="scan()">
+            <ion-icon slot="icon-only" name="qr-code"></ion-icon>
+        </ion-button>
+    </ion-buttons>
+    <ion-title style="text-align: left; color:#124A3A; font-weight: 800; font-size: 20px;">Nudge 123</ion-title>
+    <ion-buttons slot="primary" style="color: #75807d;">
+        <ion-button>
+            <ion-icon slot="icon-only" name="notifications"></ion-icon>
+        </ion-button>
+        <ion-button (click)="get()">
+            <ion-icon slot="icon-only" name="chatbox"></ion-icon>
+        </ion-button>
+        <ion-button>
+            <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
+        </ion-button>
+    </ion-buttons>
+</ion-toolbar>
+<ion-content class="ion-no-padding">
+    <ion-grid>
+        <ion-list>
+            <ion-list-header style="color:#023224;font-weight: 800;">Keep our Earth green and clean!</ion-list-header>
+            <ion-item lines="none">
+                <ion-label style="color:#124A3A;font-weight: 800;"><b>Top Picks!</b></ion-label>
+            </ion-item>
+        </ion-list>
+        <ion-slides [options]="slideOpts" id="slides">
+            <ion-slide *ngFor="let item of products">
+                <ion-card (click)="move(item.productId)" style="text-align: left;">
+                    <div class="imgContainer">
+                        <div class="test">
+                            <ion-img [src]="item.src"></ion-img>
+                        </div>
+                    </div>
+                    <ion-card-header>
+                        <ion-card-title>{{ item.product }}</ion-card-title>
+                        <ion-card-subtitle>
+                            <ion-icon name="star" style="color:#798959;"></ion-icon>&nbsp;
+                            <span style="color:#696b79;">{{ item.rating }}</span>
+                        </ion-card-subtitle>
+                    </ion-card-header>
+                </ion-card>
+            </ion-slide>
+        </ion-slides>
+
+        <ion-list id="list">
+            <ion-item style="margin: 0;" lines="none">
+                <h6 style="margin: 0; font-weight: 800;">Products</h6>
+            </ion-item>
+        </ion-list>
+        <ion-row>
+            <ion-col (click)="move(item.productId)" size="12" size-sm="4" *ngFor="let item of products">
+                <ion-card class="ion-padding" style="--background: #f2f6f6 ;">
+                    <ion-row>
+                        <ion-col>
+                            <div class="imageContainer">
+                                <ion-img [src]="item.src" height="100%" width="100%"></ion-img>
+                            </div>
+                        </ion-col>
+                        <ion-col class="wrap">
+                            <ion-card-header>
+                                <ion-card-subtitle style="color:#015557; font-weight: 800">{{ item.category }}
+                                </ion-card-subtitle>
+                                <ion-card-title style="color:#015557;font-weight: 800;">{{ item.product }}<br />
+                                    <ion-chip color="warning" style="margin-top: 1rem;">
+                                        <!-- <ion-icon name="star"></ion-icon>
+                                        <ion-label>{{ item.rating }}</ion-label> -->
+                                        <ion-icon name="star"></ion-icon>
+                                        <ion-label>Review</ion-label>
+                                    </ion-chip>
+                                </ion-card-title>
+                            </ion-card-header>
+                        </ion-col>
+                        <ion-card-content>
+                            <!-- <p> One of the motorcycles made in India is
+                                the
+                                TVS
+                                Apache
+                                RTR 200 4V.</p> -->
+                        </ion-card-content>
+                    </ion-row>
+                </ion-card>
+            </ion-col>
+            <!-- <ion-col size="12" size-sm="4">
+                <ion-card style="--background: #f2f6f6 ;">
+                    <ion-row>
+                        <ion-col class="ion-padding">
+                            <img src="../../assets/images/bike.jpeg" height="100%" width="100%" />
+                        </ion-col>
+                        <ion-col>
+                            <ion-card-header>
+                                <ion-card-subtitle style="color:#015557; font-weight: 800">Washing Machine
+                                </ion-card-subtitle>
+                                <ion-card-title style="color:#015557;font-weight: 800;">Machine
+                                </ion-card-title>
+                            </ion-card-header>
+                            <ion-card-content style="color:#404e4e;font-weight: 800;">
+                                <ion-icon name="star"></ion-icon> &nbsp; . &nbsp;&nbsp;<b>4M</b>&nbsp;rating<br />
+                                <ion-chip color="warning" style="margin-top: 1rem;">
+                                    <ion-label>Review</ion-label>
+                                </ion-chip>
+                            </ion-card-content>
+                        </ion-col>
+                        <p class="ion-padding" style="margin-top: -1rem;"> One of the motorcycles made in India is the
+                            TVS
+                            Apache
+                            RTR 200 4V.</p>
+                    </ion-row>
+                </ion-card>
+            </ion-col>
+            <ion-col size="12" size-sm="4">
+                <ion-card style="--background: #f2f6f6 ;">
+                    <ion-row>
+                        <ion-col class="ion-padding">
+                            <img src="../../assets/images/bike2.jpg" height="100%" width="100%" />
+                        </ion-col>
+                        <ion-col>
+                            <ion-card-header>
+                                <ion-card-subtitle style="color:#015557; font-weight: 800">Royal Enfield Continental GT
+                                </ion-card-subtitle>
+                                <ion-card-title style="color:#015557;font-weight: 800;">Bike</ion-card-title>
+                            </ion-card-header>
+                            <ion-card-content style="color:#404e4e;font-weight: 800;">
+                                 <ion-icon name="star"></ion-icon> &nbsp; . &nbsp;&nbsp;<b>4M</b>&nbsp;rating<br />
+                                <ion-chip color="warning" style="margin-top: 1rem;">
+                                    <ion-label>Review</ion-label>
+                                </ion-chip>
+                            </ion-card-content>
+                        </ion-col>
+                        <p class="ion-padding" style="margin-top: -1rem;"> One of the motorcycles made in India is the
+                            TVS
+                            Apache
+                            RTR 200 4V.</p>
+                    </ion-row>
+                </ion-card>
+            </ion-col>
+            <ion-col size="12" size-sm="4">
+                <ion-card style="--background: #f2f6f6 ;">
+                    <ion-row>
+                        <ion-col class="ion-padding">
+                            <img src="../../assets/images/car.jpg" height="100%" width="100%" />
+                        </ion-col>
+                        <ion-col>
+                            <ion-card-header>
+                                <ion-card-subtitle style="color:#015557; font-weight: 800">Royal Enfield Continental GT
+                                </ion-card-subtitle>
+                                <ion-card-title style="color:#015557;font-weight: 800;">Bike</ion-card-title>
+                            </ion-card-header>
+                            <ion-card-content style="color:#404e4e;font-weight: 800;">
+                                 <ion-icon name="star"></ion-icon> &nbsp; . &nbsp;&nbsp;<b>4M</b>&nbsp;rating<br />
+                                <ion-chip color="warning" style="margin-top: 1rem;">
+                                    <ion-label>Review</ion-label>
+                                </ion-chip>
+                            </ion-card-content>
+                        </ion-col>
+                        <p class="ion-padding" style="margin-top: -1rem;"> One of the motorcycles made in India is the
+                            TVS
+                            Apache
+                            RTR 200 4V.</p>
+                    </ion-row>
+                </ion-card>
+            </ion-col> -->
+        </ion-row>
+    </ion-grid>
+</ion-content>
