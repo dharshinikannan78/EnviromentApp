@@ -1,3 +1,18 @@
+.main {
+    // background: url(../../assets/images/25.png) no-repeat center center fixed;
+    // --background: linear-gradient(#002328, #f0f9f9);
+    --background: linear-gradient(#58967f, #f0f9f9);
+    // 58967f
+    // --background: #f0f9f9;
+    // --background: #a8d4d7;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
 ion-text {
     color: #000b05;
 }
@@ -9,10 +24,15 @@ ion-modal {
         rgba(17, 17, 26, 0.1) 0px 16px 56px;
 }
 
+ion-item {
+    padding: 5px 0;
+    --border-width: 0;
+    --border-radius: 16px;
+    --box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
 ion-button {
-    --border-radius: 6rem;
-    margin-top: 4rem;
-    height: 3.5rem;
+    --border-radius: 20px;
     --box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     --padding-top: 22px;
     --padding-bottom: 22px;
@@ -26,17 +46,24 @@ ion-content {
     margin-top: 0.5rem;
 }
 
+// ion-input {
+//     --padding-bottom: 12px !important;
+//     --padding-start: 12px !important;
+// }
+
 ion-label {
-    font-weight: 700;
-    color: #000b05;
+    // margin-top: -5px !important;
     padding-left: 13px;
 }
 
+ion-thumbnail {
+    margin-top: 1rem;
+    padding-left: 0.5rem;
+}
 ion-icon {
     font-size: 30px;
     color: #545758b3;
 }
-
 p {
     padding: 8px 0;
 }
@@ -44,6 +71,7 @@ p {
 .bottom {
     position: absolute;
     width: 90%;
+    
     bottom: 20%;
 }
 
@@ -57,14 +85,6 @@ p {
     }
 }
 
-ion-checkbox {
-    font-size: 0.5rem;
-}
-
-.ion-card1 {
-    padding: 15px;
-    border-radius: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+ion-item::part(native) {
+    background: #fbfbfb;
 }

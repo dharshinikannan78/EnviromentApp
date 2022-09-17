@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ChartConfiguration } from 'chart.js';
 
 
@@ -9,11 +10,11 @@ import { ChartConfiguration } from 'chart.js';
 })
 export class Tab6Page implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router,) { }
 
   ngOnInit() {
   }
-  segment:string = 'scale';
+  segment: string = 'scale';
   segmentChanged(ev: any) {
     this.segment = ev.detail.value;
   }
@@ -22,7 +23,7 @@ export class Tab6Page implements OnInit {
   public barChartPlugins = [];
 
   public barChartData: ChartConfiguration<'bar'>['data'] = {
-    labels: [ 'Bio diversity', 'Emmission', 'Over fertilization', 'Water Consumption'],
+    labels: ['Bio diversity', 'Emmission', 'Over fertilization', 'Water Consumption'],
     datasets: [{
       label: 'Global Index Parameters',
       data: [6, 5, 2, 8, 10],
@@ -51,5 +52,9 @@ export class Tab6Page implements OnInit {
   public barChartOptions: ChartConfiguration<'bar'>['options'] = {
     responsive: true,
   };
+  getClick() {
+    this.router.navigate(['tab7'])
+    console.log('geetha')
+  }
 
 }
