@@ -11,6 +11,7 @@ import { ModalController } from '@ionic/angular';
 })
 export class LoginPage implements OnInit {
 
+  segment: any;
   constructor(
     private router: Router,
     private modalcontroller: ModalController
@@ -19,7 +20,9 @@ export class LoginPage implements OnInit {
   isopen: boolean = true;
   isSignUp: boolean = false;
 
-  ngOnInit() { }
+  ngOnInit() {
+    this.segment = "Login";
+  }
 
   logIn() {
     this.modalcontroller.dismiss();
@@ -27,6 +30,12 @@ export class LoginPage implements OnInit {
   }
   getClick() {
     this.isSignUp = true;
+  }
+
+  segmentChanged(ev: any) {
+    this.segment = ev.detail.value;
+    console.log('Segment changed', ev);
+    console.log(this.segment, 'seg')
   }
 
 }

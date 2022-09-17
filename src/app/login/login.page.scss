@@ -43,12 +43,12 @@ ion-modal {
         rgba(17, 17, 26, 0.1) 0px 16px 56px;
 }
 
-ion-item {
-    padding: 5px 0;
-    --border-width: 0;
-    --border-radius: 16px;
-    --box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-}
+// ion-item {
+//     padding: 5px 0;
+//     --border-width: 0;
+//     --border-radius: 16px;
+//     --box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+// }
 
 ion-button {
     --border-radius: 6rem;
@@ -83,12 +83,14 @@ ion-content {
 }
 
 // ion-input {
-//     --padding-bottom: 12px !important;
-//        --padding-start: 12px !important;
+
+//     // --padding-bottom: 12px !important;
+//     //    --padding-start: 12px !important;
 // }
 
 ion-label {
-    // margin-top: -5px !important;
+    font-weight: 700;
+    color: #000b05;
     padding-left: 13px;
 }
 
@@ -109,7 +111,6 @@ p {
 .bottom {
     position: absolute;
     width: 90%;
-
     bottom: 20%;
 }
 .content {
@@ -121,14 +122,14 @@ p {
     }
 }
 
-ion-item::part(native) {
-    background: #fbfbfb;
-}
+// ion-item::part(native) {
+//     background: #fbfbfb;
+// }
 
 ion-checkbox {
     font-size: 0.5rem;
 }
-ion-card {
+.ion-card1 {
     padding: 15px;
     border-radius: 60px;
     display: flex;
