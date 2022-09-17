@@ -36,8 +36,10 @@
     "@ionic/pwa-elements": "^3.1.1",
     "@types/cordova": "^0.0.34",
     "angular-svg-round-progressbar": "^9.0.0",
+    "chart.js": "^3.9.1",
     "cordova-ios": "6.2.0",
     "cordova-res": "^0.15.4",
+    "ng2-charts": "^4.0.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.2.0",
     "zone.js": "~0.11.4"
