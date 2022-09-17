@@ -1,0 +1,54 @@
+<ion-content class="ion-padding">
+  <ion-text>
+    <h3 class="text-center ion-margin-bottom">Global Index Parameters</h3>
+  </ion-text>
+  <ion-card style="border-radius: 10rem; margin-top:1.5rem;">
+    <ion-segment (ionChange)="segmentChanged($event)" value="scale">
+      <ion-segment-button value="scale">
+        <ion-label>Scale 1-10</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="bar">
+        <ion-label>Bar Chart</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-card>
+  <div *ngIf="segment == 'scale'" class="ion-margin-bottom">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Bio Diversity <span class="indexValue">5</span></ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-progress-bar color="success" value="0.3"></ion-progress-bar>
+      </ion-card-content>
+    </ion-card>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Emissions <span class="indexValue">5</span></ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-progress-bar color="danger" value="0.8"></ion-progress-bar>
+      </ion-card-content>
+    </ion-card>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Soil Fertility <span class="indexValue">5</span></ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-progress-bar color="warning" value="0.2"></ion-progress-bar>
+      </ion-card-content>
+    </ion-card>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Water Consumption <span class="indexValue">5</span></ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-progress-bar color="warning" value="0.4"></ion-progress-bar>
+      </ion-card-content>
+    </ion-card>
+  </div>
+  <div *ngIf="segment == 'bar'">
+    <canvas baseChart [data]="barChartData" [options]="barChartOptions" [plugins]="barChartPlugins"
+      [legend]="barChartLegend" [type]="'bar'" height="500px">
+    </canvas>
+  </div>
+</ion-content>
