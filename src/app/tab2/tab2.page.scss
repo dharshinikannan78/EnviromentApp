@@ -97,9 +97,12 @@ h6 {
 
 ion-grid {
   border-radius: 1rem;
-  padding: 12px;
+  padding: 0;
   background: #f2f6f6;
   margin-top: 2rem;
+}
+ion-row {
+  padding: 0 12px;
 }
 
 .imgwrap {
