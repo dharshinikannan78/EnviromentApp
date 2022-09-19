@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { tick } from '@angular/core/testing';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-tab2',
@@ -12,7 +13,7 @@ export class Tab2Page implements OnInit {
   isProduct: boolean = false;
   isSecondProduct: boolean = false;
   isThirdProduct: boolean = false;
-  constructor() {
+  constructor( private router: Router,) {
 
 
     this.products = [
@@ -151,5 +152,8 @@ export class Tab2Page implements OnInit {
       }
     }
   }
-
+  get() {
+    console.log('geetha')
+    this.router.navigate(['/chat']);
+  }
 }
