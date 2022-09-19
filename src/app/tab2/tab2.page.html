@@ -1,5 +1,4 @@
 <ion-toolbar>
-
   <ion-item lines="none">
     <ion-icon slot="end" name="home"></ion-icon>
     <ion-label style="color: grey; font-weight: 800; display: flex">RATING</ion-label>
@@ -16,11 +15,7 @@
       <ion-col style="margin-top: 5rem; padding-left: 20px; font-size: 2rem">
         <div class="fortext">
           <div class="progWrap">
-
-
             <div class="current">&nbsp;{{gotit.evnRating}} <span> /10</span>&nbsp;</div>
-
-
             <round-progress class="progressBar" [color]="'#015557'" [background]="'#ECF1FF'" [current]="gotit.evnRating"
               [max]="10" [radius]="145" [stroke]="20" [rounded]="true" [clockwise]="false" [responsive]="false"
               [duration]="1000" [animation]="'easeInOutQuart'" [animationDelay]="0">
@@ -29,7 +24,6 @@
         </div>
       </ion-col>
     </ion-row>
-
     <ion-card-content>
       <ion-item lines="none">
         <ion-label class="productTitle ion-no-margin">
@@ -81,8 +75,79 @@
           </ion-col>
         </ion-row>
       </ion-item>
+
+      <ion-grid style="text-align: center;">
+        <ion-row style="font-weight: bold;">
+          <ion-col size="4">
+            Typical Values
+          </ion-col>
+          <ion-col size="4">
+            Per 100g
+          </ion-col>
+          <ion-col size="4">
+            Per Serving(15g)
+          </ion-col>
+        </ion-row>
+        <ion-row style="background-color: #FFF9A6;">
+          <ion-col size="4">
+            Energy
+          </ion-col>
+          <ion-col size="4">
+            433kJ<br/>102kcal
+          </ion-col>
+          <ion-col size="4">
+            65kJ<br/>15kcal
+          </ion-col>
+        </ion-row>
+        <ion-row style="background-color: #FFF9A6;">
+          <ion-col size="4">
+            Fat of which Saturated
+          </ion-col>
+          <ion-col size="4">
+            0.1g<br/>Trace
+          </ion-col>
+          <ion-col size="4">
+            Trace<br/>Trace
+          </ion-col>
+        </ion-row>
+        <ion-row style="background-color: rgba(230, 103, 107, 0.8);">
+          <ion-col size="4">
+            carbohydrate of which Sugars
+          </ion-col>
+          <ion-col size="4">
+            22.2g<br/>23.2g
+          </ion-col>
+          <ion-col size="4">
+            3.4g<br/>3.5g
+          </ion-col>
+        </ion-row>
+        <ion-row style="background-color: #bcf5bc;">
+          <ion-col size="4">
+            Protein
+          </ion-col>
+          <ion-col size="4">
+            1.2g
+          </ion-col>
+          <ion-col size="4">
+            0.2g
+          </ion-col>
+        </ion-row>
+        <ion-row style="background-color: #bcf5bc; border-radius: 0 0 1rem 1rem;">
+          <ion-col size="4">
+            Salt
+          </ion-col>
+          <ion-col size="4">
+            1.8g
+          </ion-col>
+          <ion-col size="4">
+            0.3g
+          </ion-col>
+        </ion-row>
+
+      </ion-grid>
+
       <div class="chipWrap">
-        <div class="fortext cursorP" routerLink="/tabs/tab6" >
+        <div class="fortext cursorP" routerLink="/tabs/tab6">
           <div class="progWrap">
             <div class="current">{{ gotit.global }}</div>
             <round-progress [color]="'#015557'" [background]="'#ECF1FF'" [current]="gotit.global" [max]="5"
