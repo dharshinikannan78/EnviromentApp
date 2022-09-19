@@ -14,6 +14,7 @@ export class Tab6Page implements OnInit {
 
   ngOnInit() {
   }
+  
   segment: string = 'scale';
   segmentChanged(ev: any) {
     this.segment = ev.detail.value;

@@ -18,12 +18,19 @@ export class LoginPage implements OnInit {
 
   isopen: boolean = true;
 
-  ngOnInit() { }
+  ngOnInit() {
+    this.segment = 'loginIn';
+  }
 
   logIn() {
     this.modalcontroller.dismiss();
     this.router.navigate(['/tabs/tab1']);
   }
 
+  segment: string = 'scale';
+
+  segmentChanged(ev: any) {
+    this.segment = ev.detail.value;
+  }
 }
 

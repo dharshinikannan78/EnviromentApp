@@ -16,7 +16,11 @@
       <ion-col style="margin-top: 5rem; padding-left: 20px; font-size: 2rem">
         <div class="fortext">
           <div class="progWrap">
+
+
             <div class="current">&nbsp;{{gotit.evnRating}} <span> /10</span>&nbsp;</div>
+
+
             <round-progress class="progressBar" [color]="'#015557'" [background]="'#ECF1FF'" [current]="gotit.evnRating"
               [max]="10" [radius]="145" [stroke]="20" [rounded]="true" [clockwise]="false" [responsive]="false"
               [duration]="1000" [animation]="'easeInOutQuart'" [animationDelay]="0">
@@ -36,11 +40,11 @@
             <ion-icon name="star" (click)="onClick()"></ion-icon>{{ gotit.rating }}
           </ion-label>
         </ion-button> -->
-        <ion-buttons slot="end" style="color: #75807d;" (click)="onClick()">
+        <!-- <ion-buttons slot="end" style="color: #75807d;" (click)="onClick()">
           <ion-button style="font-size: 1rem;">
             <ion-icon style="font-size: 1rem;" name="star"></ion-icon>{{ gotit.rating }}
           </ion-button>
-        </ion-buttons>
+        </ion-buttons> -->
 
 
       </ion-item>
@@ -59,6 +63,24 @@
         </ion-label>
       </ion-item>
 
+      <ion-item lines="none">
+        <ion-row style="color: #75807d;">
+          <ion-col size="2">
+            <ion-icon style="font-size: 1rem;" name="thumbs-down"></ion-icon>
+          </ion-col>
+          <ion-col size="3">
+            <ion-icon style="font-size: 1rem;" name="thumbs-up"></ion-icon>
+          </ion-col>
+          <ion-col size="3">
+            <!-- <ion-button > -->
+            <ion-icon (click)="get()" style="font-size: 1rem;" name="chatbox"></ion-icon>
+            <!-- </ion-button> -->
+          </ion-col>
+          <ion-col size="3">
+            <ion-icon style="font-size: 1rem;" name="star" (click)="onClick()"></ion-icon>
+          </ion-col>
+        </ion-row>
+      </ion-item>
       <div class="chipWrap">
         <div class="fortext">
           <div class="progWrap">
@@ -88,7 +110,7 @@
               [animation]="'easeInOutQuart'" [animationDelay]="0">
             </round-progress>
           </div>
-          <h6 style="text-align: center">Your Lifestyle<br />Rate</h6>
+          <h6 style="text-align: center">Source<br />Index</h6>
         </div>
       </div>
       <div class="chipContainer">
