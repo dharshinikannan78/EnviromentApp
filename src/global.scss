@@ -36,9 +36,14 @@ $secondary-text-color: #93959f;
 
 
 .app-update-toast {
-    --color: #fff;
-    --ion-color-contrast: #fff !important;
-  }
-  .text-center {
-    text-align: center;
-  }
+  --color: #fff;
+  --ion-color-contrast: #fff !important;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.cursorP {
+  cursor: pointer;
+}
